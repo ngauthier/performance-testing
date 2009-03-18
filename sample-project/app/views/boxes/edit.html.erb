@@ -1,0 +1,16 @@
+<h1>Editing box</h1>
+
+<% form_for(@box) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @box %> |
+<%= link_to 'Back', boxes_path %>

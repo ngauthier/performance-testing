@@ -1,0 +1,20 @@
+<h1>Listing widgets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @widgets.each do |widgets| %>
+  <tr>
+    <td><%=h widgets.name %></td>
+    <td><%= link_to 'Show', widgets %></td>
+    <td><%= link_to 'Edit', edit_widgets_path(widgets) %></td>
+    <td><%= link_to 'Destroy', widgets, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New widgets', new_widgets_path %>
