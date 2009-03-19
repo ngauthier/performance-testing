@@ -1,6 +1,6 @@
 =Initial Project
 
-git branch initial v1.0
+git checkout initial
 
 RAILS_ENV=development rake db:drop db:create db:schema:load db:stories
 rm log/development.log
@@ -28,9 +28,11 @@ slow-actions log/development.log --actions
 
 OK, we have a problem with boxes/index. Time to write a profile test.
 
-git branch profile_test v1.1
+git checkout profile_test
 
-# ruby script/performance_test boxes_index
+Look at the file "test/performance/boxes_index_test.rb"
+
+# run, but it takes a long time, so I added the output to git
 # ruby test/performance/boxes_index_test.rb
 
 Open test_boxes_index_process_time_graph.html
@@ -38,13 +40,17 @@ Look at bold lines, scroll until a bold line is calling one of our processes
 
 =Create a benchmark test
 
-git branch benchmark_test v1.2
+git checkout benchmark_test
+
+Look at the file "test/performance/boxes_rank_test.rb"
 
 RAILS_ENV=test rake db:drop db:create db:schema:load db:stories
 ruby test/performance/boxes_rank_test.rb
 
 =Improve the code
 
-git branch fixed_code v1.3
+git checkout fixed_code
+
+Look at the file "app/models/box.rb"
 
 Fix the code, and use the benchmark to ensure that it is faster.
