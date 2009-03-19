@@ -2,11 +2,11 @@
 defaults:
   install_options: --no-ri --no-rdoc
 gems:
-- name: sqlite3-ruby
-  version: '= 1.2.4'
 - name: rails
   version: '= 2.3.1'
 - name: ruby-prof
   version: '= 0.7.3'
 - name: faker
   version: '= 0.3.1'
+- name: ngauthier-slow-actions
+  version: '= 0.3.3'
