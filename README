@@ -1,6 +1,6 @@
 =Initial Project
 
-Git to the beginning
+git branch initial 1.0
 
 RAILS_ENV=development rake db:drop db:create db:schema:load db:stories
 rm log/development.log
@@ -8,4 +8,21 @@ RAILS_ENV=development ruby script/server
 
 Browse to page. Hit refresh a few times. Click on new and edit.
 
-Run slow-actions on log. Looks good!
+slow-actions log/development.log --actions
+rm log/test.log
+RAILS_ENV=test rake db:drop db:create db:schema:load db:stories test
+slow-actions log/test.log --actions
+
+=Simulate production for a week
+
+Got an email from a user: "lol ur site sux takes liek 5mins to load hahaha n00b"
+
+Pull from production:
+RAILS_ENV=development rake data:load
+RAILS_ENV=development ruby script/server
+
+Browse to index
+
+slow-actions log/development.log --actions
+
+OK, we have a problem with boxes/index. Time to write a profile test.
