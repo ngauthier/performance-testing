@@ -1,7 +1,9 @@
 =Get the code
   git clone git://github.com/ngauthier/performance-testing.git
 
-=Initial Project
+=Try it yourself
+
+==Initial Project
 
 Checkout the branch
   git checkout origin/initial
@@ -20,7 +22,7 @@ Check the server speed
   RAILS_ENV=test rake db:drop db:create db:schema:load db:stories test
   slow-actions log/test.log --actions
 
-=Simulate production for a week
+==Simulate production for a week
 
 Got an email from a user: "lol ur site sux takes liek 5mins to load hahaha n00b"
 
@@ -45,7 +47,7 @@ Look at the file "test/performance/boxes_index_test.rb"
 Open "test_boxes_index_process_time_graph.html"
 Look at bold lines, scroll until a bold line is calling one of our processes
 
-=Create a benchmark test
+==Create a benchmark test
 
   git checkout origin/benchmark_test
 
@@ -54,7 +56,7 @@ Look at the file "test/performance/boxes_rank_test.rb"
   RAILS_ENV=test rake db:drop db:create db:schema:load db:stories
   ruby test/performance/boxes_rank_test.rb
 
-=Improve the code
+==Improve the code
 
   git checkout origin/fixed_code
 
