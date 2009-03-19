@@ -27,11 +27,10 @@ slow-actions log/development.log --actions
 
 OK, we have a problem with boxes/index. Time to write a profile test.
 
-git branch profile v1.1
+git branch profile_test v1.1
 
-ruby test/performance/boxes_index_performance_test.rb
-
-while it runs, open it up and explain the test. Explain why not a rails perf test (stack size)
+# ruby script/performance_test boxes_index
+# ruby test/performance/boxes_index_test.rb
 
 Open test_boxes_index_process_time_graph.html
 Look at bold lines, scroll until a bold line is calling one of our processes
