@@ -43,3 +43,8 @@ git branch benchmark_test v1.2
 
 # ruby test/performance/boxes_rank_test.rb
 
+=Improve the code
+
+git branch fixed_code v1.3
+
+Fix the code, and use the benchmark to ensure that it is faster.

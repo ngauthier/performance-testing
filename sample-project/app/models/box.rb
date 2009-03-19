@@ -1,6 +1,9 @@
 class Box < ActiveRecord::Base
+  def self.ordered_boxes
+    @ordered_boxes ||= Box.find(:all, :order => 'number')
+  end
+
   def rank
-    all_boxes = Box.find(:all, :order => 'number')
-    all_boxes.index(self)
+    Box.ordered_boxes.index(self)
   end
 end
