@@ -34,3 +34,12 @@ git branch profile_test v1.1
 
 Open test_boxes_index_process_time_graph.html
 Look at bold lines, scroll until a bold line is calling one of our processes
+
+=Create a benchmark test
+
+Copy a unit test, but include "RubyProf::Test" in the test.
+
+git branch benchmark_test v1.2
+
+# ruby test/performance/boxes_rank_test.rb
+
