@@ -1,0 +1,11 @@
+=Initial Project
+
+Git to the beginning
+
+RAILS_ENV=development rake db:drop db:create db:schema:load db:stories
+rm log/development.log
+RAILS_ENV=development ruby script/server
+
+Browse to page. Hit refresh a few times. Click on new and edit.
+
+Run slow-actions on log. Looks good!
