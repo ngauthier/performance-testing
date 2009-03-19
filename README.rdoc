@@ -23,6 +23,9 @@ Browse to page. Hit refresh a few times. Click on new and edit.
 Check the server speed
 
   slow-actions log/development.log --actions
+
+And check the speed of the tests
+
   rm log/test.log
   RAILS_ENV=test rake db:drop db:create db:schema:load db:stories test
   slow-actions log/test.log --actions
